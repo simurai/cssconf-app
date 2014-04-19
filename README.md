@@ -8,6 +8,8 @@ If you have seen the talk and wanna play around a bit with the Flexbox reorderin
 
 [Live Demo](http://simurai.github.io/cssconf-app)
 
+> Note: The loading can take a while since the app is not optimized for production. That way it's easier to understand the source.
+
 
 ## How to customize
 
