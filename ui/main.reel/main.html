@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        Main
+    </title>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "main"},
+                "_badge": {"#": "badge"}
+            },
+            "bindings": {
+                "classList.has('is-teamShake')": { "<-": "@toggleSwitch.checked" }
+            }
+        },
+        "logo": {
+            "prototype": "ui/logo.reel",
+            "properties": {
+                "element": {"#": "logo"}
+            }
+        },
+        "badge": {
+            "prototype": "digit/ui/badge.reel",
+            "properties": {
+                "element": {"#": "badge"},
+                "label": "+",
+                "value": "0"
+            }
+        },
+        "checkbox": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "checkbox"},
+                "checked": false
+            }
+        },
+        "checkbox2": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "checkbox2"},
+                "checked": false
+            }
+        },
+        "checkbox3": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "checkbox3"},
+                "checked": false
+            }
+        },
+        "checkbox4": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "checkbox4"},
+                "checked": false
+            }
+        },
+        "checkbox5": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "checkbox5"},
+                "checked": false
+            }
+        },
+        "toggleSwitch": {
+            "prototype": "digit/ui/toggle-switch.reel",
+            "properties": {
+                "element": {"#": "toggleSwitch"}
+            }
+        },
+        "search": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "search"},
+                "placeholderValue": "Search"
+            },
+            "listeners": [{
+                "type": "action",
+                "listener": {"@": "owner"}
+            }]
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="App" data-montage-id="main">
+        <header class="Bar Bar--header">
+            <div data-montage-id="logo"></div>
+            <input class="Search" data-montage-id="search" type="search">
+            <output class="Badge" data-montage-id="badge"></output>
+        </header>
+        <main class="Main">
+            <div class="Main-splash"></div>
+            <input class="Puppet" type="checkbox" data-montage-id="checkbox">
+            <input class="Puppet" type="checkbox" data-montage-id="checkbox2">
+            <input class="Puppet" type="checkbox" data-montage-id="checkbox3">
+            <input class="Puppet" type="checkbox" data-montage-id="checkbox4">
+            <input class="Puppet" type="checkbox" data-montage-id="checkbox5">
+        </main>
+        <footer class="Bar Bar--footer">
+            <input class="Toggle" type="checkbox" data-montage-id="toggleSwitch">
+        </footer>
+    </div>
+</body>
+</html>

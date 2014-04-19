@@ -1,0 +1,21 @@
+
+/* 
+ * This file is reserved for your global style rules. 
+ */
+
+html {
+    height: 100%;
+    font-family: Avenir, sans-serif;
+
+    /* Play around to your liking */
+    font-size: 16px;
+    fill: currentColor;
+    
+    color: hsl(212, 72%, 80%);
+    background: coral;
+}
+
+body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+}

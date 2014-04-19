@@ -1,0 +1,226 @@
+.App {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity .6s;
+}
+
+.montage-app-loaded .App {
+    opacity: 1;
+}
+
+
+/* Bar ---------------------------------- */
+
+.Bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    background-color: hsla(0, 0%, 0%, 0.7);
+}
+
+.Bar--header {
+    
+}
+
+.Bar--footer {
+    
+}
+
+.Bar > * {
+    margin: 0.4rem;
+}
+
+/* Header ---------------------------------- */
+
+.Badge {
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.4;
+    font-weight: 500;
+    text-align: center;  
+    border-radius: 1.25em;
+    border-width: 2px;
+}
+
+.is-team .Badge {
+    -webkit-animation: badge .3s cubic-bezier(0.130, 0.625, 0.405, 1.340);
+}
+@-webkit-keyframes badge {
+    20% { -webkit-transform: scale(.5); }
+}
+
+
+
+.Search {
+    flex: 1;
+    font-family: inherit;
+}
+
+
+
+/* Main ---------------------------------- */
+
+.Main {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.Main-splash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .1;
+    background: url(../../assets/images/logo.svg) no-repeat center center;
+    background-size: 70% auto;
+}
+
+.is-team .Main-splash {
+    opacity: 0;
+    transition: opacity .2s ease-in;
+}
+
+
+/* Puppet ---------------------------------- */
+
+.Puppet {
+    margin: .4rem 1rem;
+    width: 7em;
+    height: 7em;
+    border-radius: 100%;
+    border: 3px solid;
+    background: transparent no-repeat center center;
+    background-size: auto 130%;
+}
+
+.Puppet .digit-Checkbox-icon {
+    display: none;
+}
+
+.Puppet:nth-of-type(1) { background-image: url(../../assets/images/team/ben.jpg); }
+.Puppet:nth-of-type(2) { background-image: url(../../assets/images/team/fiona.jpg); }
+.Puppet:nth-of-type(3) { background-image: url(../../assets/images/team/glen.jpg); }
+.Puppet:nth-of-type(4) { background-image: url(../../assets/images/team/michael.jpg); }
+.Puppet:nth-of-type(5) { background-image: url(../../assets/images/team/tim.jpg); }
+
+
+/* Shakes ---------------------------------- */
+
+.Puppet:nth-of-type(1).montage-Checkbox--checked,
+.is-teamShake .Puppet:nth-of-type(1) {
+    -webkit-animation: shake1 .5s ease-in-out infinite;
+}
+@-webkit-keyframes shake1 {
+    40% { -webkit-transform: scale(.7); }
+    50% { -webkit-transform: scale(.8); }
+    60% { -webkit-transform: scale(.7); }
+}
+
+.Puppet:nth-of-type(2).montage-Checkbox--checked,
+.is-teamShake .Puppet:nth-of-type(2) {
+    -webkit-animation: shake2 .5s ease infinite;
+}
+@-webkit-keyframes shake2 {
+    33% { -webkit-transform: perspective(200) translateY(0px) rotateY(-35deg); }
+    40% { -webkit-transform: perspective(200) translateY(4px) rotateY(-30deg); }
+    60% { -webkit-transform: perspective(200) translateY(-4px) rotateY( 30deg); }
+    66% { -webkit-transform: perspective(200) translateY(-0px) rotateY( 35deg); }
+}
+
+.Puppet:nth-of-type(3).montage-Checkbox--checked,
+.is-teamShake .Puppet:nth-of-type(3) {
+    -webkit-animation: shake3 .5s ease infinite;
+}
+@-webkit-keyframes shake3 {
+    40% { -webkit-transform: translate3d(-4px,15px,0); }
+    45% { -webkit-transform: translate3d(10px,20px,0); }
+    55% { -webkit-transform: translate3d(-10px,30px,0); }
+    60% { -webkit-transform: translate3d(4px,10px,0); }
+}
+
+.Puppet:nth-of-type(4).montage-Checkbox--checked,
+.is-teamShake .Puppet:nth-of-type(4) {
+    -webkit-animation: shake4 .5s ease infinite;
+}
+@-webkit-keyframes shake4 {
+    30% { -webkit-transform: translate3d(8px,-2px,0); }
+    34% { -webkit-transform: translate3d(16px,-4px,0); }
+    38% { -webkit-transform: translate3d(8px,-2px,0) scale(1,.8); }
+    62% { -webkit-transform: translate3d(-8px,2px,0) scale(1,.8); }
+    66% { -webkit-transform: translate3d(-16px,4px,0); }
+    70% { -webkit-transform: translate3d(-8px,2px,0); }
+}
+
+.Puppet:nth-of-type(5).montage-Checkbox--checked,
+.is-teamShake .Puppet:nth-of-type(5) {
+    -webkit-animation: shake5 .5s ease infinite;
+}
+@-webkit-keyframes shake5 {
+    10% { -webkit-transform: translate3d(-8px,-2px,0); }
+    30% { -webkit-transform: translate3d(28px,10px,0); }
+    40% { -webkit-transform: translate3d(8px,2px,0); }
+    45% { -webkit-transform: translate3d(30px,-20px,0) scale(2); }
+    50% { -webkit-transform: translate3d(8px,-12px,0); }
+    62% { -webkit-transform: translate3d(-10px,-16px,0); }
+    66% { -webkit-transform: translate3d(-26px,24px,0) scale(1.5); }
+    70% { -webkit-transform: translate3d(20px,3px,0); }
+    80% { -webkit-transform: translate3d(-30px,-2px,0); }
+    95% { -webkit-transform: translate3d(0px,20px,0); }
+}
+
+
+
+/* Show Puppet */
+
+.Puppet {
+    opacity: 0;
+    -webkit-transform: translateY(-600%) rotate(90deg) scale(1.2);
+}
+
+.is-team .Puppet {
+    opacity: 1;
+    -webkit-transform: translateY(0) rotate(0) scale(1);
+    transition: opacity .3s, -webkit-transform .4s cubic-bezier(0.690, 0.160, 0.605, 1.285);
+}
+
+.Puppet:nth-of-type(1) { transition-delay: 0s; }
+.Puppet:nth-of-type(2) { transition-delay: 0.02s; }
+.Puppet:nth-of-type(3) { transition-delay: 0.04s; }
+.Puppet:nth-of-type(4) { transition-delay: 0.06s; }
+.Puppet:nth-of-type(5) { transition-delay: 0.2s; }
+
+
+
+
+/* Footer ---------------------------------- */
+
+.Toggle {
+    vertical-align: middle;
+}
+
+.Toggle.montage-ToggleSwitch--checked > .digit-ToggleSwitch-thumb {
+    background-color: hsla(0, 0%, 0%, 0.72);
+}
+
+
+
+/* Responsive ---------------------------------- */
+
+@media (min-width: 500px) and (min-height: 800px) {
+        
+    .App {
+        font-size: 2em;
+    }
+    
+}
