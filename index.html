@@ -19,7 +19,33 @@
     <link rel="shortcut icon" sizes="128x128" href="assets/images/icons/icon-128x128.png">
 
     <link rel="stylesheet" href="assets/style/style.css">
-
+    
+    <style>
+        .Loader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: -webkit-flex;
+            display: flex;
+        }
+        .Loader-spinner {
+            display: block;
+            margin: auto;
+            width: 64px;
+            height: 64px;
+            border-radius: 32px;
+            background: url(assets/images/icons/icon-128x128.png) no-repeat center center;
+            background-size: 64px;
+            -webkit-animation: Loader--rotate 3.6s linear infinite;
+                    animation: Loader--rotate 3.6s linear infinite;
+        }
+        
+        @-webkit-keyframes Loader--rotate { 100% { -webkit-transform: rotate(-360deg); } }
+                @keyframes Loader--rotate { 100% {         transform: rotate(-360deg); } }
+    </style>
+    
     <script src="node_modules/montage/montage.js"></script>
     <script type="text/montage-serialization">
     {
@@ -30,6 +56,8 @@
     </script>
 </head>
 <body>
-    <span class="loading"></span>
+    <div class="Loader">
+        <span class="Loader-spinner"></span>
+    </div>
 </body>
 </html>
